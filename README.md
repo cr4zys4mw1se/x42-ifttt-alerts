@@ -34,7 +34,7 @@ ___
 
 
 ## Edits Required:
-* General edits that _**need**_ to be made to `ifttt.py`:
+* General edits that _**need**_ to be made in `ifttt.py`:
   * `apiBase="http://IP:42220/api/"` - Replace **IP** based on node configuration with either `127.0.0.1`, `localhost` or the **INTERNAL IP** (ex. `192.168.1.205`) of the Node. _**The x42.conf may need editing, check [Side-Notes](#side-notes) for more information**_
   * `walletName="NAME"` - Replace **NAME** with your x42 Wallet name (**`NAME`**`.wallet.json`, *do **not** append* `.wallet.json`)
   * `r.post("https://maker.ifttt.com/trigger/TRIGGERNAME/with/key/APIKEY", data=)` - There are **3** entries of `r.post()` that need edits. Replace **TRIGGERNAME** with the IFTTT *Event Name* and the **APIKEY** with your *Webhooks* URL (ex. `WbSpblmUBWY16RH5AtTWORSbwJNpFH8zKVNckNtP095`)
