@@ -68,6 +68,8 @@ def alertMe():
                     r.post("https://maker.ifttt.com/trigger/RECEIVED-TRIGGERNAME/with/key/APIKEY", data=report)
                     x42list.clear()
                     x42list.append(current)
+                else:
+                    x42list.append(current)
             else:
                 x42list.append(current)
         else:
