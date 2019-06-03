@@ -78,10 +78,10 @@ def alertMe():
         time.sleep(60.00)
 try:
     now=datetime.now()
-    print(e.emojize("   :mag_right:Started at: "+str(now.strftime("%r, on %m/%d/%Y:mag:")), use_aliases=True),end="\r")
+    print(e.emojize("   :mag_right:Started at: "+str(now.strftime("%r, on %m/%d/%Y:mag:\n")), use_aliases=True),end="\r")
     alertMe()
 except ConnectionRefusedError:
-    print(e.emojize("          :scream: Connection was Refused. :scream:          ", use_aliases=True))
+    print(e.emojize("          :scream: Connection was Refused. :scream:", use_aliases=True))
     warn={}
     warn["value1"]=e.emojize("\n:warning:", use_aliases=True)
     warn["value2"]=e.emojize(":warning:\n", use_aliases=True)
@@ -89,4 +89,9 @@ except ConnectionRefusedError:
     time.sleep(30.00)
     alertMe()
 except KeyboardInterrupt:
-    print(e.emojize("     :frowning: IFTTT alerts have been cancelled. :frowning:     ", use_aliases=True))
+    print(e.emojize("     :frowning: IFTTT alerts have been cancelled. :frowning:", use_aliases=True))
+except KeyError:
+    now=datetime.now()
+    print(str(now.strftime("\n     Key Error occurred on\n     %r, on %m/%d/%Y. Retrying in 15 seconds.\n")))
+    time.sleep(15.00)
+    alertMe()
