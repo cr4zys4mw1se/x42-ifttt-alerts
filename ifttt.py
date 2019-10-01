@@ -81,12 +81,8 @@ try:
     print(e.emojize("   :mag_right:Started at: "+str(now.strftime("%r, on %m/%d/%Y:mag:\n")), use_aliases=True))
     alertMe()
 except ConnectionRefusedError:
-    print(e.emojize("          :scream: Connection was Refused. :scream:", use_aliases=True))
-    warn={}
-    warn["value1"]=e.emojize("\n:warning:", use_aliases=True)
-    warn["value2"]=e.emojize(":warning:\n", use_aliases=True)
-    r.post("https://maker.ifttt.com/trigger/CONNECTIONERROR-TRIGGERNAME/with/key/APIKEY", data=warn)
-    time.sleep(30.00)
+    print(e.emojize("          :scream: Connection was Refused. :scream:\nRetrying in 150 seconds.\n", use_aliases=True))
+    time.sleep(150.00)
     alertMe()
 except KeyboardInterrupt:
     print(e.emojize("     :frowning: IFTTT alerts have been cancelled. :frowning:", use_aliases=True))
