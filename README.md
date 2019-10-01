@@ -49,7 +49,7 @@ You have a few options on how to run the script. You can run it on a separate de
 
 
 ## Applet Configuration:
-  * This script **_REQUIRES_ 3** IFTTT applets:
+  * This script **_REQUIRES_ 2** IFTTT applets:
     1. Staked: ```Block staked! {{Value1}}Your new x42 balance is: {{Value2}} {{Value3}}Reported on: {{OccurredAt}}```
     2. Received: ```{{Value1}}Your new x42 balance is: {{Value2}} {{Value3}}Reported on: {{OccurredAt}}```
 
