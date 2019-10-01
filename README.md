@@ -23,9 +23,8 @@ ___
 1. [x42-FullNode](https://github.com/x42protocol/X42-FullNode)
 2. Python 3.x *`(Personal Preference: Python3-dev [sudo apt install python3-dev])`*
 3. Pip3 *`sudo apt install python3-pip`*
-4. Requests `pip3 install requests`
-5. Emoji `pip3 install emoji`
-6. IFTTT Account and Application
+4. Requirements.txt `pip3 install -r requirements.txt`
+5. IFTTT Account and Application
 
 ### IFTTT
 * [IFTTT Account](https://ifttt.com/join)
@@ -53,7 +52,6 @@ You have a few options on how to run the script. You can run it on a separate de
   * This script **_REQUIRES_ 3** IFTTT applets:
     1. Staked: ```Block staked! {{Value1}}Your new x42 balance is: {{Value2}} {{Value3}}Reported on: {{OccurredAt}}```
     2. Received: ```{{Value1}}Your new x42 balance is: {{Value2}} {{Value3}}Reported on: {{OccurredAt}}```
-    3. Connection Error: ```The connection was refused while checking your Balance. Your x42 Node may be down! {{Value1}}Retrying in 30s...{{Value2}} Reported on: {{OccurredAt}}```
 
 **Create the Applet(s)**:
   1. *My Applets*
