@@ -78,7 +78,7 @@ def alertMe():
         time.sleep(60.00)
 try:
     now=datetime.now()
-    print(e.emojize("   :mag_right:Started at: "+str(now.strftime("%r, on %m/%d/%Y:mag:\n")), use_aliases=True),end="\r")
+    print(e.emojize("   :mag_right:Started at: "+str(now.strftime("%r, on %m/%d/%Y:mag:\n")), use_aliases=True))
     alertMe()
 except ConnectionRefusedError:
     print(e.emojize("          :scream: Connection was Refused. :scream:", use_aliases=True))
@@ -92,6 +92,6 @@ except KeyboardInterrupt:
     print(e.emojize("     :frowning: IFTTT alerts have been cancelled. :frowning:", use_aliases=True))
 except KeyError:
     now=datetime.now()
-    print(str(now.strftime("\n     Key Error occurred on\n     %r, on %m/%d/%Y. Retrying in 15 seconds.\n")))
-    time.sleep(15.00)
+    print(str(now.strftime("\n     Key Error occurred on\n     %r, on %m/%d/%Y. Retrying in 150 seconds.\n")))
+    time.sleep(150.00)
     alertMe()
